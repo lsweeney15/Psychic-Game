@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
@@ -8,135 +8,31 @@
     <title>Psychic Game</title>
 </head>
 
-<body>
+<!-- CSS -->
 
-    <!-- Html that displays the appropriate text!-->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <h1>The Psychic Game</h1>
-    <p>Guess what letter I'm thinking of:</p>
-    <p>Wins:</p>
-    <p>Losses:</p>
-    <p>Guesses left:</p>
-    <p>Your guesses so far:</p>
+<!-- Html that displays the appropriate text!-->
 
-    <script type="text/javascript">
+<h1>The Psychic Game</h1>
+<p>Guess what letter I'm thinking of:</p>
 
-        // Computer picks a random letter
+<p>Wins:
+    <span id="your-wins">0</span>
+</p>
+<p>Losses:
+    <span id="your-losses">0</span>
+</p>
+<p>Guesses Left:
+    <span id="guesses-left">9</span>
+</p>
+<p>Your Guesses So Far:
+    <span id="your-guesses"> </span>
+</p>
 
-        var computerChoice = ["a-z"];
+<!-- Javascript link -->
 
-        for (var i = 0; i < 26; i++) {
-            (Math.floor(Math.random() * .length));
-        }
-
-        // Userpicks a letter document.onkeyup
-
-        var userPick = ["a-z"];
-
-        for (var i = 0; i < 26; i++) {
-            (Math.floor(Math.random() * possible.length));
-        }
-        console.log(userPick);
-
-        function myFunction() {
-            var x = userPick.getElementById("a-z").value;
-            document.getElementById("a-z").innerHTML = x;
-        }
-
-
-// If userPick equals computerChoice the win counter goes up +1
-
-// If userPick equals computerChoice guessesLeft resets to 9
-
-// If userPick equals computerChoice guessesSoFar resets
-
-// If userPick does not equal computerChoice quessesLeft goes down -1
-
-// If userPick does not equal computerChoice quessesSoFar shows the letter guessed
-
-
-
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-	<meta charset="UTF-8">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- Favicon. Image from http://simpleicon.com/ -->
-	<link rel="icon" href="assets/images/light-bulb-fav.png" type="image/png" sizes="16x16">
-	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!--Google Font-->
-	<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
-
-	<!--Font Awesome-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-	<title>Light Bulb Psychic Game</title>
-</head>
-<body>
-	
-	<!--Page Header, but not a nav bar-->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12 page-header">
-				
-				<h1>
-					<span id="smaller-font"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> LIGHT BULB <i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
-					<br>
-					PSYCHIC GAME
-				</h1>
-				
-				<h3>Make the light bulb spark with your MIND</h3>
-			</div>
-		</div>
-	</div>
-
-
-	<!--The rest of the body-->
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-lg-12">
-
-				<!--Image from http://bestanimations.com/HomeOffice/Lights/Bulbs/Bulbs.html-->
-
-				<!--black box is a still frame from the gif I saved. Still frame created with https://ezgif.com/ -->
-				<img id="image-here" class="img-responsive center-block" src="assets/images/black-box.png" alt="Light Bulb Gif">
-				<br>
-				<br>	
-				<p>Use your mind to guess the correct letter!
-				<br>If you guess right, the light bulb will spark!</p>
-
-				<p>Wins: <span id="your-wins">0</span></p>
-				<p>Losses: <span id="your-losses">0</span></p>
-				<p>Guesses Left: <span id="guesses-left">9</span></p>
-				<p>Your Guesses So Far: <span id="your-guesses"> </span></p>
-			</div>
-
-		</div>
-
-		<!-- Just realized game is impossible to play on mobile. There's no keypad! -->
-
-
-	</div>
-
-		<!--Page footer-->
-	<div class="footer">
-		<p>&#169; 2017 Laura Unaeze</p>
-	</div>
-
-
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
-
-
-    </script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 
